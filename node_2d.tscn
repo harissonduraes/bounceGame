@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://cc4jo5dxh51wu"]
+
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_3b1mo"]
+[ext_resource type="PackedScene" uid="uid://chfugsvr5dyar" path="res://objects/rigid_body_2d.tscn" id="1_qwerd"]
+[ext_resource type="PackedScene" uid="uid://34vnk7rhccyd" path="res://objects/rigid_body_2d_pink.tscn" id="2_vnccl"]
+[ext_resource type="PackedScene" uid="uid://xdrx88o0ggpl" path="res://objects/rigid_body_2d_green.tscn" id="3_wt5up"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b07nd"]
+size = Vector2(1148, 46)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(235, 45)
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_3b1mo")
+objects_templates = Array[PackedScene]([ExtResource("1_qwerd"), ExtResource("3_wt5up"), ExtResource("2_vnccl")])
+
+[node name="BackGroundColorRect" type="ColorRect" parent="."]
+offset_left = -229.0
+offset_top = -40.0
+offset_right = 1366.0
+offset_bottom = 679.0
+color = Color(0.203802, 0.583893, 0.856886, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(575, 590)
+shape = SubResource("RectangleShape2D_b07nd")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D"]
+offset_left = -575.0
+offset_top = -20.0
+offset_right = 579.0
+offset_bottom = 21.0
+color = Color(0.419608, 0.819608, 0.596078, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="RigidBody2D" parent="StaticBody2D" instance=ExtResource("1_qwerd")]
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(204, 50)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(319, 257)
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(151, 293)
+
+[node name="RigidBody2D5" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(349, 50)
+
+[node name="RigidBody2D6" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(549, 203)
+
+[node name="RigidBody2D7" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(765, 50)
+
+[node name="RigidBody2D8" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(775, 245)
+
+[node name="RigidBody2D9" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(569, 57)
+
+[node name="RigidBody2D10" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(939, 245)
+
+[node name="RigidBody2D11" parent="." instance=ExtResource("1_qwerd")]
+position = Vector2(957, 75)
+
+[node name="RigidBody2D12" parent="." instance=ExtResource("2_vnccl")]
+position = Vector2(509, 389)
+
+[node name="RigidBody2D13" parent="." instance=ExtResource("2_vnccl")]
+position = Vector2(729, 377)
+
+[node name="RigidBody2D14" parent="." instance=ExtResource("2_vnccl")]
+position = Vector2(237, 373)
+
+[node name="RigidBody2D15" parent="." instance=ExtResource("3_wt5up")]
+position = Vector2(429, 153)
+
+[node name="RigidBody2D16" parent="." instance=ExtResource("3_wt5up")]
+position = Vector2(223, 189)
+
+[node name="RigidBody2D17" parent="." instance=ExtResource("3_wt5up")]
+position = Vector2(665, 255)
+
+[node name="RigidBody2D18" parent="." instance=ExtResource("3_wt5up")]
+position = Vector2(839, 143)
+
+[node name="RigidBody2D19" parent="." instance=ExtResource("2_vnccl")]
+position = Vector2(433, 271)
+
+[node name="RigidBody2D20" parent="." instance=ExtResource("2_vnccl")]
+position = Vector2(669, 169)
+
+[node name="RigidBody2D21" parent="." instance=ExtResource("2_vnccl")]
+position = Vector2(971, 331)
+
+[node name="RigidBody2D22" parent="." instance=ExtResource("2_vnccl")]
+position = Vector2(81, 169)
